@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor & Juliane - 5 Meses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="amar.png" type="image/x-icon">
+    <style>
+        /* Reset de margens padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #1a1a1a;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Estilo do Cabeçalho (Menu Superior) */
+        header {
+            background-color: #3b5956; /* Verde escuro elegante */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+        }
+
+        .logo p {
+            font-size: 0.85rem;
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        /* Estilo da Seção Principal com a Foto de Fundo */
+        main {
+            height: calc(100vh - 85px); /* Ocupa a tela toda menos o cabeçalho */
+            /* É AQUI QUE A MÁGICA ACONTECE: O nome do arquivo da foto deve ser fundo.jpg */
+            background-image: url('fundo.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start; /* Alinha o cartão para a esquerda */
+            align-items: center;
+            padding-left: 10%; /* Espaçamento da margem esquerda */
+            position: relative;
+        }
+
+        /* Sobreposição leve para a foto não atrapalhar o cartão */
+        main::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Estilo do Cartão Central Bege */
+        .card {
+            background-color: #f5f1e7; /* Cor creme/bege */
+            padding: 3.5rem 4rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            max-width: 550px;
+            width: 90%;
+            position: relative;
+            z-index: 2; /* Fica acima da sobreposição */
+            border-radius: 4px;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .ornament {
+            font-size: 1.5rem;
+            color: #3b5956;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #1a2322;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+        }
+
+        .start-date {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .counting-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1a2322;
+            margin-bottom: 20px;
+        }
+
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-family: 'Lato', sans-serif;
+            color: #1a2322;
+        }
+
+        .time-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .time-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .time-label {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            main {
+                justify-content: center;
+                padding-left: 0;
+            }
+            nav {
+                display: none; /* Esconde o menu no celular para ficar mais limpo */
+            }
+            .card {
+                padding: 2.5rem 2rem;
+            }
+            .card h2 {
+                font-size: 2.2rem;
+            }
+            .time-number {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>VICTOR & JULIANE.</h1>
+            <p>Comemorando 5 Meses de Namoro!</p>
+        </div>
+        <nav>
+            <a href="#">Nossa História</a>
+            <a href="#">Momentos Especiais</a>
+            <a href="#">O Futuro</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <p class="subtitle">Feliz 5 Meses!</p>
+            <div class="ornament">❦</div>
+            <h2>VICTOR & JULIANE.</h2>
+            <p class="start-date">Início: 9 de Novembro de 2025</p>
+            
+            <h3 class="counting-title">CONTANDO CADA SEGUNDO...</h3>
+            
+            <div class="timer-container">
+                <div class="time-box">
+                    <span class="time-number" id="days">00</span>
+                    <span class="time-label">Dias</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="hours">00</span>
+                    <span class="time-label">Horas</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="minutes">00</span>
+                    <span class="time-label">Minutos</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="seconds">00</span>
+                    <span class="time-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Data que vocês começaram a namorar (Ano, Mês - 1, Dia, Hora, Minuto, Segundo)
+        // O mês no JavaScript começa em 0, então Novembro (11) é 10.
+        const startDate = new Date(2025, 10, 9, 0, 0, 0).getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const difference = now - startDate;
+
+            // Cálculos matemáticos para extrair dias, horas, minutos e segundos do tempo total
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Adiciona um zero à esquerda se o número for menor que 10 (ex: 09 em vez de 9)
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }
+
+        // Atualiza o cronômetro a cada 1 segundo (1000 milissegundos)
+        setInterval(updateTimer, 1000);
+        
+        // Roda uma vez logo de cara para não ficar "00" na tela esperando o primeiro segundo
+        updateTimer();
+    </script>
+
+</body>
+</html>
